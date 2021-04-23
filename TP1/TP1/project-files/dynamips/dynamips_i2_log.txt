@@ -1,0 +1,52 @@
+Feb 21 15:20:13.829 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Feb 21 15:20:13.830 HYPERVISOR: Started on IP = localhost, TCP port = 59381.
+Feb 21 15:20:13.832 HYPERVISOR: exec_cmd: hypervisor version 
+Feb 21 15:20:13.833 HYPERVISOR: exec_cmd: hypervisor working_dir /home/user/Desktop/2020-2021/2ºsemestre/RC/TP1/TP1/project-files/dynamips 
+Feb 21 15:20:13.833 GENERAL: working_dir=/home/user/Desktop/2020-2021/2ºsemestre/RC/TP1/TP1/project-files/dynamips
+Feb 21 15:20:13.834 HYPERVISOR: exec_cmd: hypervisor working_dir /home/user/Desktop/2020-2021/2ºsemestre/RC/TP1/TP1/project-files/dynamips/bb5ae477-e5fb-4e0d-af0e-ff153ec10a46 
+Feb 21 15:20:13.834 GENERAL: working_dir=/home/user/Desktop/2020-2021/2ºsemestre/RC/TP1/TP1/project-files/dynamips/bb5ae477-e5fb-4e0d-af0e-ff153ec10a46
+Feb 21 15:20:13.834 HYPERVISOR: exec_cmd: vm create R1 1 c2600 
+Feb 21 15:20:13.851 VM: VM R1 created.
+Feb 21 15:20:13.852 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5003 
+Feb 21 15:20:13.853 HYPERVISOR: exec_cmd: c2600 get_mac_addr R1 
+Feb 21 15:20:13.856 HYPERVISOR: exec_cmd: vm set_ios R1 /home/user/GNS3/images/IOS/c2600-is-mz.123-17a.bin 
+Feb 21 15:20:13.857 HYPERVISOR: exec_cmd: c2600 set_mac_addr R1 c801.06ff.0000 
+Feb 21 15:20:13.858 HYPERVISOR: exec_cmd: vm set_nvram R1 200 
+Feb 21 15:20:13.859 HYPERVISOR: exec_cmd: vm set_ram R1 80 
+Feb 21 15:20:13.860 HYPERVISOR: exec_cmd: vm get_status R1 
+Feb 21 15:20:13.860 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 NM-1FE-TX 
+Feb 21 15:20:13.862 HYPERVISOR: exec_cmd: vm set_sparse_mem R1 1 
+Feb 21 15:20:13.863 HYPERVISOR: exec_cmd: vm get_status R1 
+Feb 21 15:20:13.863 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 16 WIC-1T 
+Feb 21 15:20:14.142 HYPERVISOR: exec_cmd: nio create_udp udp-a3e1ec46-88be-4a56-8ab8-5d2063da1d7f 10002 127.0.0.1 10003 
+Feb 21 15:20:14.366 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-a3e1ec46-88be-4a56-8ab8-5d2063da1d7f 
+Feb 21 15:20:14.367 HYPERVISOR: exec_cmd: vm get_status R1 
+Feb 21 15:20:14.418 HYPERVISOR: exec_cmd: nio create_udp udp-11594bf8-76ab-46ce-a1dc-509d4899e37d 10006 127.0.0.1 10007 
+Feb 21 15:20:14.423 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 1 0 udp-11594bf8-76ab-46ce-a1dc-509d4899e37d 
+Feb 21 15:20:14.424 HYPERVISOR: exec_cmd: vm get_status R1 
+Feb 21 15:20:24.987 HYPERVISOR: exec_cmd: vm create Ghost 0 c2600 
+Feb 21 15:20:24.989 VM: VM Ghost created.
+Feb 21 15:20:24.997 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/user/GNS3/images/IOS/c2600-is-mz.123-17a.bin 
+Feb 21 15:20:24.998 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Feb 21 15:20:25.007 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost /home/user/Desktop/2020-2021/2ºsemestre/RC/TP1/TP1/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost 
+Feb 21 15:20:25.018 HYPERVISOR: exec_cmd: vm set_ram Ghost 80 
+Feb 21 15:20:25.032 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Feb 21 15:20:25.039 HYPERVISOR: exec_cmd: vm set_config Ghost configs/i0_startup-config.cfg 
+Feb 21 15:20:25.040 HYPERVISOR: exec_cmd: vm start Ghost 
+Feb 21 15:23:16.461 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Feb 21 15:23:16.461 HYPERVISOR: exec_cmd: vm stop Ghost 
+Feb 21 15:23:16.847 VM: VM Ghost shutdown.
+Feb 21 15:23:16.851 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Feb 21 15:23:16.853 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Feb 21 15:23:16.854 VM: VM Ghost destroyed.
+Feb 21 15:23:16.887 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Feb 21 15:23:16.899 HYPERVISOR: exec_cmd: vm set_ghost_file R1 /home/user/Desktop/2020-2021/2ºsemestre/RC/TP1/TP1/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost 
+Feb 21 15:23:16.917 HYPERVISOR: exec_cmd: vm get_status R1 
+Feb 21 15:23:16.933 HYPERVISOR: exec_cmd: vm set_config R1 configs/i1_startup-config.cfg 
+Feb 21 15:23:16.942 HYPERVISOR: exec_cmd: vm start R1 
+Feb 21 15:23:16.979 GHOST: loaded ghost image /home/user/Desktop/2020-2021/2ºsemestre/RC/TP1/TP1/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost (fd=13) at addr=0x7fe9bf000000 (size=0x5000000)
+Feb 21 15:23:16.986 GHOST: loaded image /home/user/Desktop/2020-2021/2ºsemestre/RC/TP1/TP1/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost successfully.
+Feb 21 15:24:18.983 HYPERVISOR: exec_cmd: vm extract_config R1 
+Feb 21 15:36:42.191 HYPERVISOR: exec_cmd: vm set_ios R1 /home/user/GNS3/images/IOS/c2600-is-mz.123-17a.bin 
+Feb 21 15:36:46.747 HYPERVISOR: exec_cmd: vm set_ios R1 /home/user/GNS3/images/IOS/c2600-is-mz.123-17a.bin 
+Feb 21 15:46:01.545 HYPERVISOR: exec_cmd: vm set_ios R1 /home/user/GNS3/images/IOS/c2600-is-mz.123-17a.bin 
